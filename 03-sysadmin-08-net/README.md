@@ -105,4 +105,4 @@
 
 5. Используя diagrams.net, создайте L3 диаграмму вашей домашней сети или любой другой сети, с которой вы работали.
 
-     **Ответ:** ![alt l2](https://github.com/asexsela/homework/blob/master/03-sysadmin-08-net/image.jpg?raw=true)
+     **Ответ:** ![alt l2](https://github.com/asexsela/homework/blob/master/03-sysadmin-08-net/L3.png?raw=true)
