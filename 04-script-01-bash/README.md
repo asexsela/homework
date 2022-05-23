@@ -113,6 +113,8 @@
             then
                 echo "    ERROR on " $h check=$r >>error.log
                 exit
+            else
+                echo "    " $h check=$r >> hosts.log
             fi
             
         done
