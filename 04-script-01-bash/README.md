@@ -104,17 +104,20 @@
 
     while (($r == 0))
     do
-    for h in ${hosts[@]}
-    do
-	curl -Is --connect-timeout $timeout $h:80 >/dev/null
-	r=$?
-	if (($r != 0))
-	then
-	    echo "    ERROR on " $h check=$r >>error.log
-        exit
-    else
-        echo "    " $h check=$r >> hosts.log
-	fi
-    
+        for h in ${hosts[@]}
+        do
+            curl -Is --connect-timeout $timeout $h:80 >/dev/null
+            r=$?
+
+            if (($r != 0))
+            then
+                echo "    ERROR on " $h check=$r >>error.log
+                exit
+            else
+                echo "    " $h check=$r >> hosts.log
+            fi
+            
+        done
+    done
 
 ```
