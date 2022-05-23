@@ -108,7 +108,7 @@
     python3 04-script-02-py/main.py
 
     Укажите абсолютный путь к репозиторию:
-    > /var/www/netology/virt-homeworks/
+    > /var/www/netology/virt-homeworks
 
     /var/www/netology/virt-homeworks/README.md
 ```
