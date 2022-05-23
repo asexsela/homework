@@ -43,14 +43,13 @@ while (($res == 0))
 do
     for h in ${hosts[@]}
     do
-	curl -Is --connect-timeout $timeout $h:9200 >/dev/null
-	res=$?
-	if (($res != 0))
-	then
-	    echo "    ERROR on " $h check=$res >>error.log
-        exit
-    else
-        echo "    " $h check=$res >> hosts.log
-	fi
+        curl -Is --connect-timeout $timeout $h:9200 >/dev/null
+        res=$?
+        
+        if (($res != 0))
+        then
+            echo "    ERROR on " $h check=$res >>error.log
+            exit
+        fi
     done
 done
