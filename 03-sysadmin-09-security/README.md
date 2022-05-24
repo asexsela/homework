@@ -117,7 +117,7 @@
     **Ответ:**
 
 ```shell
-     sudo tcpdump -i enp34s0 -w tcpdump_out.pcap
+     sudo tcpdump -i enp34s0 -c 100 -w tcpdump_out.pcap
 
 ```
 ![](https://github.com/asexsela/homework/blob/master/03-sysadmin-09-security/wireshark.png?raw=true)

@@ -21,18 +21,18 @@ import json
 #         print(os.path.abspath(prepare_result))
 
 
-print("Укажите абсолютный путь к репозиторию:")
-path = input('> ')
+# print("Укажите абсолютный путь к репозиторию:")
+# path = input('> ')
 
 
-os.chdir(path)
-bash_command = ["git status"]
-result_os = os.popen(' && '.join(bash_command)).read()
+# os.chdir(path)
+# bash_command = ["git status"]
+# result_os = os.popen(' && '.join(bash_command)).read()
 
-for result in result_os.split('\n'):
-    if result.find('modified') != -1:
-        prepare_result = result.replace('\tmodified:   ', '/')
-        print('\n'+path+prepare_result)
+# for result in result_os.split('\n'):
+#     if result.find('modified') != -1:
+#         prepare_result = result.replace('\tmodified:   ', '/')
+#         print('\n'+path+prepare_result)
 
 
 # conf_file="./04-script-02-py/config.json"
