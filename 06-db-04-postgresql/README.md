@@ -98,7 +98,8 @@
 ## Ответ
 
  - Backup
-    ![](https://github.com/asexsela/homework/blob/master/06-db-04-postgresql/images/db_new_backup.png?raw=true)
+
+   ![](https://github.com/asexsela/homework/blob/master/06-db-04-postgresql/images/db_new_backup.png?raw=true)
 
  - Unique title
 
