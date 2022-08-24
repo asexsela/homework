@@ -1,4 +1,4 @@
- ======================== OpenSearch Configuration =========================
+#  ======================== OpenSearch Configuration =========================
 #
 # NOTE: OpenSearch comes with reasonable defaults for most settings.
 #       Before you set out to tweak and tune the configuration, make sure you
@@ -93,7 +93,7 @@ plugins.security.ssl.transport.pemcert_filepath: esnode.pem
 plugins.security.ssl.transport.pemkey_filepath: esnode-key.pem
 plugins.security.ssl.transport.pemtrustedcas_filepath: root-ca.pem
 plugins.security.ssl.transport.enforce_hostname_verification: false
-plugins.security.ssl.http.enabled: true
+plugins.security.ssl.http.enabled: false
 plugins.security.ssl.http.pemcert_filepath: esnode.pem
 plugins.security.ssl.http.pemkey_filepath: esnode-key.pem
 plugins.security.ssl.http.pemtrustedcas_filepath: root-ca.pem

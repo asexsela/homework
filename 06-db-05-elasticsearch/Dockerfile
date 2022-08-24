@@ -6,4 +6,6 @@ RUN yum clean all
 
 RUN yum install -y opensearch vim openssl
 
+COPY ./opensearch.yml /etc/opensearch/
+
 CMD ["/usr/sbin/init"]

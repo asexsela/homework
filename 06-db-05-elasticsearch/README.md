@@ -42,8 +42,6 @@
     docker run --rm -itd -p 127.0.0.1:9300:9200 --network host --privileged  asexsela/netology-opensearch
     # Подключаемся к контейнеру
     docker exec -it {image_id} bash
-    # Устанавливаем имя ноды - node.name: netology_test
-    vim /etc/opensearch/opensearch.yml
     # Запускаем opensearch
     systemctl start opensearch.service
     # Проверяем работу сервиса
@@ -51,6 +49,7 @@
 
 ```
 
+### Dockerfile
 ```Dockerfile
     FROM centos:7
 
@@ -64,3 +63,5 @@
 
 ```
 
+### Dockerhub
+https://hub.docker.com/r/asexsela/netology-opensearch
