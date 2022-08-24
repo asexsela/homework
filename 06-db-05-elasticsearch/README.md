@@ -34,3 +34,33 @@
 Далее мы будем работать с данным экземпляром elasticsearch.
 
 ## Ответ
+
+```bash
+    # Собираем докер образ
+    docker build --rm -t asexsela/netology-opensearch:latest .
+    # Запускаем образ
+    docker run --rm -itd -p 127.0.0.1:9300:9200 --network host --privileged  asexsela/netology-opensearch
+    # Подключаемся к контейнеру
+    docker exec -it {image_id} bash
+    # Устанавливаем имя ноды - node.name: netology_test
+    vim /etc/opensearch/opensearch.yml
+    # Запускаем opensearch
+    systemctl start opensearch.service
+    # Проверяем работу сервиса
+    curl -XGET https://localhost:9200 -u 'admin:admin' --insecure
+
+```
+
+```Dockerfile
+    FROM centos:7
+
+    RUN curl -SL https://artifacts.opensearch.org/releases/bundle/opensearch/2.x/opensearch-2.x.repo -o /etc/yum.repos.d/opensearch-2.x.repo
+
+    RUN yum clean all
+
+    RUN yum install -y opensearch vim openssl
+
+    CMD ["/usr/sbin/init"]
+
+```
+
